@@ -41,3 +41,24 @@ notasaltas = 0;
 
 
 }
+
+
+
+#include <stdio.h>
+#include <math.h>
+void main()
+
+{
+int x,xo, y,yo, a, soma;
+    printf("digite um x"); scanf("%i", &x);
+    xo = x;
+    printf(" digite um y"); scanf("%i", &y);
+    yo = y;
+soma = x;
+    for( a = x; a < y; a++){
+        x++;
+        soma = soma + x;
+    }
+    printf(" a soma dos termos de x: %i até y: %i é %i", xo, yo, soma );
+}
+
