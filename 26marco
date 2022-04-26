@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <math.h>
+void main()
+
+{
+float nota,somanota, media, porcentagem, notasaltas1, numeronotas1;
+int notasbaixas, notasaltas, numeronotas;
+nota = 0.0;
+numeronotas = 0;
+somanota= 0.0;
+notasbaixas = 0;
+notasaltas = 0;
+
+
+    while(nota >= 0.0){ // enquanto forem lidas notas positivas permanece em loop
+        printf("digite uma nota: ");
+        scanf("%f", &nota);
+        if(nota >= 0){
+            numeronotas += 1; // conta o numero de notas lançadas
+            somanota = somanota + nota; // soma as notas
+            if( nota < 5.0){ 
+                notasbaixas += 1; //conta notas baixas
+            }
+
+            else if (nota >= 5.0 ) {
+                notasaltas+= 1; //contas notas altas
+            }
+        }
+    }
+    notasaltas1 = notasaltas; //transforma int em float para a divisao na porcentagem
+    numeronotas1 = numeronotas;
+    media = somanota/ numeronotas; //faz a meida
+    porcentagem = (notasaltas1 / numeronotas1) * 100.0;
+
+
+    printf(" houveram %i notas baixas\n", notasbaixas); //digita numero de notas baixas
+    printf(" houveram %i notas altas\n", notasaltas);    //digita numero de notas altas
+    printf(" a média geral foi de %f\n", media);   //digita media
+    printf("a porcentagem de alunos  com nota maior que 5 é de %f  %", porcentagem);  //digita porcentagem de notas altas
+
+
+
+}
